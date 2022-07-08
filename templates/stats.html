@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Stats</title>
+</head>
+<body>
+<h2>Your ID {{ name }}</h2>
+<h1>Today stats:</h1>
+    {% for game in games%}
+    <p>SessionId(start): {{ game.player }}</p>
+    <p>Credits before: {{ game.credit }}</p>
+    <p>Result: {{ game.result }}</p>
+    <p>Time: {{ game.time }}</p>
+    <hr>
+    {% endfor %}
+<a href="{{ url_for('start')}}">Go back</a>
+</body>
+</html>
